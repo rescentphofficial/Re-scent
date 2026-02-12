@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:Scent - Sustainable Luxury Fragrance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="Re:Scent Logo" class="logo-img">
+                <span class="logo-text">Re:Scent</span>
+            </div>
+
+            <ul>
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#how-to-use" class="nav-link">How to Use</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#contact" class="nav-link">Order</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Auto-Rotating Carousel -->
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Re:Scent</h1>
+                <p>A Perfume Balm in a Sustainable Packaging. Reimagining the Bottle as a Sculpted, Compostable Vessel.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">Discover More</a>
+                    <a href="#contact" class="btn-secondary">Order Now</a>
+                </div>
+            </div>
+            <div class="hero-product">
+                <div class="product-showcase">
+                    <div class="floating-product" id="floatingProduct">
+                        <div class="carousel-image active">
+                            <img src="mockup 3 - Copy.png" alt="Nectar Noir">
+                        </div>
+                        <div class="carousel-image">
+                            <img src="mockup 2.png" alt="Euphoric Solace">
+                        </div>
+                        <div class="carousel-image">
+                            <img src="mockup 1.png" alt="Ivory Rouge">
+                        </div>
+                    </div>
+                    <div class="floating-elements element-1" id="fruit1">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FF9800'/%3E%3Ccircle cx='40' cy='35' r='8' fill='%23FFB74D'/%3E%3Cellipse cx='65' cy='60' rx='15' ry='20' fill='%23FF7043'/%3E%3C/svg%3E" alt="Orange">
+                    </div>
+                    <div class="floating-elements element-2" id="fruit2">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FFEB3B'/%3E%3Cellipse cx='50' cy='30' rx='12' ry='15' fill='%23FFD54F'/%3E%3C/svg%3E" alt="Lemon">
+                    </div>
+                    <div class="floating-elements element-3" id="fruit3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 20 L60 40 L45 50 L55 65 L40 70 L35 50 Z' fill='%2366BB6A'/%3E%3Cellipse cx='45' cy='35' rx='5' ry='8' fill='%237CB342'/%3E%3C/svg%3E" alt="Leaf">
+                    </div>
+                    <div class="floating-elements element-4" id="fruit4">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 20 L65 45 L55 55 L70 75 L50 80 L30 75 L45 55 L35 45 Z' fill='%2366BB6A'/%3E%3C/svg%3E" alt="Leaf 2">
+                    </div>
+                    <div class="floating-elements element-5" id="fruit5">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%239CCC65'/%3E%3Ccircle cx='35' cy='40' r='15' fill='%237CB342'/%3E%3Ccircle cx='65' cy='55' r='12' fill='%237CB342'/%3E%3C/svg%3E" alt="Nature Element">
+                    </div>
+                    <div class="floating-elements element-6" id="fruit6">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L90 40 L70 90 L30 90 L10 40 Z' fill='%23FFB74D'/%3E%3C/svg%3E" alt="Star Element">
+                    </div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <h2 class="section-title">About Re:Scent</h2>
+            <p style="font-size: 1.2rem; color: #666; max-width: 800px; margin-bottom: 2rem;">
+                Re:Scent is redefining modern luxury by proving that exceptional fragrance and environmental responsibility can exist together. We challenge the perfume industry's dependence on single-use plastics and fragile glass, replacing them with design-forward, planet-conscious innovation.
+            </p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon">♻️</div>
+                    <h3>Sustainable by Design</h3>
+                    <p>Our sculpted, paper-based perfume vessel eliminates single-use plastics and non-recyclable glass—without compromising elegance, durability, or luxury appeal.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Modern Push-Up System</h3>
+                    <p>A solid, push-up delivery design that's mess-free, travel-friendly, and built for everyday use—no spills, no breakage, no waste.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">💚</div>
+                    <h3>Premium Fragrance Experience</h3>
+                    <p>Crafted for olfactory sophistication, our solid perfumes deliver long-lasting scent using high-quality oils and waxes, wrapped in refined, minimalist aesthetics.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">💎</div>
+                    <h3>Responsible Luxury</h3>
+                    <p>Engineered with a protective internal barrier, our packaging prevents leaks and absorption—proving that sustainable materials can perform at a luxury standard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="section-container">
+            <h2 class="section-title">Product Range</h2>
+
+            <div class="products-grid">
+                <div class="product-card" onclick="selectProduct('Nectar Noir', 160)">
+                    <div class="product-image-wrapper">
+                        <img src="mockup 3.png" alt="Nectar Noir">
+                    </div>
+                    <h3>Nectar Noir</h3>
+                    <p>A 30 gram concentrated wax-based fragrance offering a subtle, personal scent with direct-to-skin application.</p>
+                    <div class="product-btn-wrapper">
+                        <button class="product-btn">Add to Order →</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="selectProduct('Euphoric Solace', 160)">
+                    <div class="product-image-wrapper">
+                        <img src="mockup 2.png" alt="Euphoric Solace">
+                    </div>
+                    <h3>Euphoric Solace</h3>
+                    <p>Compostable and recyclable cardboard tube designed for complete end-of-life sustainability.</p>
+                    <div class="product-btn-wrapper">
+                        <button class="product-btn">Add to Order →</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="selectProduct('Ivory Rouge', 160)">
+                    <div class="product-image-wrapper">
+                        <img src="mockup 1.png" alt="Ivory Rouge">
+                    </div>
+                    <h3>Ivory Rouge</h3>
+                    <p>Spill-proof, travel-friendly format allowing mess-free application anytime, anywhere.</p>
+                    <div class="product-btn-wrapper">
+                        <button class="product-btn">Add to Order →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section id="how-to-use">
+        <div class="section-container">
+            <h2 class="section-title">How To Use</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Open with care</h3>
+                    <p>Gently slide or lift the cardboard lid to protect the natural fiber packaging.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Apply directly</h3>
+                    <p>Glide or dab the balm directly onto desired pulse points such as the wrists, neck, behind the ears, or collarbone. Your natural body heat will soften the balm and release the fragrance.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Reapply as needed</h3>
+                    <p>Refresh throughout the day for a subtle, personal scent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-container">
+            <h2 class="section-title">Product Features</h2>
+            <div class="features-grid">
+                <ul class="features-list">
+                    <li>
+                        <strong>Solid Perfume Balm</strong>
+                        <p>A 30 gram concentrated wax-based fragrance that offers a subtle, personal scent with direct-to-skin application.</p>
+                    </li>
+                    <li>
+                        <strong>Zero-Waste Packaging</strong>
+                        <p>Housed in a signature compostable and recyclable cardboard tube designed for complete end-of-life sustainability.</p>
+                    </li>
+                    <li>
+                        <strong>Portable & Precise</strong>
+                        <p>A spill-proof, travel-friendly format that allows for mess-free application anytime, anywhere.</p>
+                    </li>
+                    <li>
+                        <strong>Interactive Experience</strong>
+                        <p>Each tube features an integrated QR code, providing immediate access to scent profiles, directions for use, and recycling protocols.</p>
+                    </li>
+                </ul>
+                <div class="feature-image-showcase">
+                    <img src="mockup 3.png" alt="Re:Scent Product Feature">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact">
+        <div class="section-container">
+            <h2 class="section-title">Sustainable Impact</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                Our product is a direct response to the fragrance industry's critical reliance on non-recyclable materials. By choosing Re:Scent, you are supporting:
+            </p>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="sdg-badge">♻️</div>
+                    <h3>Responsible Consumption</h3>
+                    <ul>
+                        <li>Integrated QR code teaches sustainability</li>
+                        <li>Community empowerment through education</li>
+                        <li>Guided ecological responsibility</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <div class="sdg-badge">∞</div>
+                    <h3>Circular Economy</h3>
+                    <ul>
+                        <li>Premium compostable cardboard</li>
+                        <li>Recyclable at home</li>
+                        <li>Zero-waste disposal model</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <div class="sdg-badge">🌍</div>
+                    <h3>Climate Action</h3>
+                    <ul>
+                        <li>Lower carbon emissions</li>
+                        <li>Paper-based production</li>
+                        <li>Reduced shipping footprint</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <div class="sdg-badge">🐟</div>
+                    <h3>Life Below Water</h3>
+                    <ul>
+                        <li>100% plastic-free packaging</li>
+                        <li>No microplastics</li>
+                        <li>Ocean-safe materials</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER SECTION -->
+    <section id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Place Your Order</h2>
+            
+            <div class="order-container">
+                <!-- Order Form -->
+                <div class="order-form-section">
+                    <h3>📦 Order Details</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fullName" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+63 912 345 6789" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Delivery Address</label>
+                            <textarea id="address" placeholder="Street address, city, postal code" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Select Your Scent</label>
+                            <div class="product-selection">
+                                <div class="product-option">
+                                    <input type="radio" id="nectar" name="scent" value="Nectar Noir" data-price="160" onchange="handleScent(this)">
+                                    <label for="nectar">🖤 Nectar Noir</label>
+                                    <span class="price">₱160</span>
+                                </div>
+                                <div class="product-option">
+                                    <input type="radio" id="euphoric" name="scent" value="Euphoric Solace" data-price="160" onchange="handleScent(this)">
+                                    <label for="euphoric">💖 Euphoric Solace</label>
+                                    <span class="price">₱160</span>
+                                </div>
+                                <div class="product-option">
+                                    <input type="radio" id="ivory" name="scent" value="Ivory Rouge" data-price="160" onchange="handleScent(this)">
+                                    <label for="ivory">✨ Ivory Rouge</label>
+                                    <span class="price">₱160</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Special Instructions</label>
+                            <textarea id="instructions" placeholder="Any special requests or notes..."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="order-items">
+                        <div class="order-item">
+                            <div class="item-details">
+                                <h4 id="selectedScent">Select a scent</h4>
+                                <p>Premium Solid Perfume Balm • 30g</p>
+                            </div>
+                            <div class="item-price" id="itemPrice">—</div>
+                        </div>
+                    </div>
+
+                    <div class="quantity-control">
+                        <span>Quantity:</span>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <button type="button" class="qty-btn" onclick="decreaseQty()">−</button>
+                            <span class="qty-display" id="quantity">1</span>
+                            <button type="button" class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">—</span>
+                    </div>
+                    <div class="summary-row">
+                        <span><span class="free-shipping-badge">FREE SHIPPING 🎉</span></span>
+                        <span id="shipping">₱0</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">—</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem; text-align: center;">Free shipping to Luzon, Visayas & Mindanao</p>
+
+                    <div class="email-button-section">
+                        <button type="button" class="email-button" onclick="sendOrderEmail()">
+                            📧 Send Order to Email
+                        </button>
+                        <p class="email-hint">Your order details will be sent to rescentph.official@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="section-container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>📦 About Re:Scent</h4>
+                    <p>We're redefining luxury fragrance with sustainable, eco-friendly solutions. Every product is crafted with care for your skin and our planet.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📞 Contact Us</h4>
+                    <a href="tel:+639127374185">(0912) 737 - 4185</a>
+                    <a href="mailto:rescentph.official@gmail.com">rescentph.official@gmail.com</a>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">
+                        Davao, Davao Region, PH
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>🌐 Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                    <p style="margin-top: 1.5rem; font-size: 0.95rem;">
+                        Connect with us on social media for exclusive updates and promotions!
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Re:Scent. All rights reserved. | Sustainable Luxury Fragrance | Made with 💚 for the Planet</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
