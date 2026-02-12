@@ -311,16 +311,23 @@ nav a.active {
 .section-title {
     font-size: 3rem;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
+}
+
+#about > .section-container > p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 3rem;
 }
 
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 0;
 }
 
 .info-card {
@@ -498,7 +505,7 @@ nav a.active {
 
 .steps-container {
     max-width: 900px;
-    margin: 4rem auto;
+    margin: 4rem auto 0;
     background: white;
     border-radius: 40px;
     padding: 4rem;
@@ -624,11 +631,21 @@ nav a.active {
     background: #f8f8f8;
 }
 
+#impact > .section-container > p {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .impact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 0;
 }
 
 .impact-card {
@@ -728,7 +745,6 @@ nav a.active {
     grid-template-columns: 1.2fr 1fr;
     gap: 3rem;
     align-items: flex-start;
-    margin-bottom: 5rem;
 }
 
 /* Order Form */
@@ -1086,26 +1102,165 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
+    /* Navigation adjustments */
+    nav .container {
+        padding: 0 1.5rem;
     }
 
     nav ul {
         display: none;
     }
 
-    .products-grid {
-        grid-template-columns: 1fr;
+    /* Hero section mobile */
+    #hero {
+        padding: 6rem 1.5rem 3rem;
+        min-height: auto;
     }
 
-    .steps-container {
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+
+    .product-showcase {
+        height: 400px;
+        max-width: 100%;
+    }
+
+    /* Section spacing */
+    #about,
+    #products,
+    #how-to-use,
+    #features,
+    #impact,
+    #contact {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #about > .section-container > p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Info cards mobile */
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Products mobile */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .product-card {
         padding: 2rem;
     }
 
+    .product-image-wrapper {
+        min-height: 200px;
+    }
+
+    /* Steps mobile */
+    .steps-container {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+
+    .step-item {
+        padding-left: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .step-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .step-item p {
+        font-size: 1rem;
+    }
+
+    /* Features mobile */
+    .features-grid {
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .features-list li {
+        padding-left: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .features-list li::before {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+
+    .features-list strong {
+        font-size: 1.2rem;
+    }
+
+    .features-list p {
+        font-size: 0.95rem;
+    }
+
+    .feature-image-showcase {
+        height: 300px;
+    }
+
+    /* Impact mobile */
+    #impact > .section-container > p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .impact-card {
+        padding: 2rem;
+    }
+
+    .sdg-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    /* Order form mobile */
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -1117,10 +1272,61 @@ nav a.active {
 
     .product-selection {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 
-    .feature-image-showcase {
-        height: 400px;
+    .product-option {
+        padding: 1.2rem 1rem;
+    }
+
+    .product-option label {
+        font-size: 0.95rem;
+    }
+
+    .product-option .price {
+        font-size: 1.1rem;
+    }
+
+    /* Footer mobile */
+    .footer-container {
+        gap: 2.5rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer-section p {
+        font-size: 0.95rem;
+    }
+
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .product-showcase {
+        height: 350px;
+    }
+
+    .order-form-section h3,
+    .order-summary h3 {
+        font-size: 1.5rem;
     }
 }
 
