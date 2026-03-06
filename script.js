@@ -15,7 +15,7 @@ const FEEDBACK_TEMPLATE_ID = 'template_r7yud9o';
 // Initialize EmailJS with your public key
 (function () {
     if (typeof emailjs !== 'undefined') {
-        emailjs.init({ publicKey: WEaxY9FjAwAfbfZSp });
+        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
     }
 })();
 
@@ -228,11 +228,12 @@ function highlightStars(count) {
 
 function submitFeedback() {
     const name   = document.getElementById('feedbackName').value.trim();
+    const email  = document.getElementById('feedbackEmail').value.trim();
     const scent  = document.getElementById('feedbackScent').value;
     const rating = parseInt(document.getElementById('ratingValue').value);
     const text   = document.getElementById('feedbackText').value.trim();
 
-    if (!name || !scent || rating === 0 || !text) {
+    if (!name || !email || !scent || rating === 0 || !text) {
         showToast('❌ Please fill in all fields and give a star rating.', 'error');
         return;
     }
@@ -242,7 +243,8 @@ function submitFeedback() {
     fbBtn.textContent = '⏳ Sending...';
 
     const templateParams = {
-        to_email:      'rescentph.official@gmail.com',
+        to_email:      email,           // ← auto-reply goes TO the customer
+        reply_to:      email,           // ← matches {{reply_to}} in EmailJS template
         customer_name: name,
         scent:         scent,
         rating:        '★'.repeat(rating) + '☆'.repeat(5 - rating) + ` (${rating}/5)`,
@@ -277,6 +279,7 @@ function submitFeedback() {
 
 function resetFeedbackForm() {
     document.getElementById('feedbackName').value  = '';
+    document.getElementById('feedbackEmail').value = '';
     document.getElementById('feedbackScent').value = '';
     document.getElementById('ratingValue').value   = '0';
     document.getElementById('feedbackText').value  = '';
