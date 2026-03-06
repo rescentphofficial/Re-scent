@@ -15,7 +15,7 @@ const FEEDBACK_TEMPLATE_ID = 'template_r7yud9o';
 // Initialize EmailJS with your public key
 (function () {
     if (typeof emailjs !== 'undefined') {
-        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+        emailjs.init({ publicKey: WEaxY9FjAwAfbfZSp });
     }
 })();
 
