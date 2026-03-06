@@ -1647,9 +1647,11 @@ nav a.active {
 }
 
 /* Scroll Animations */
+/* Sections start hidden; JS adds .visible. Fallback: show after 1s via JS */
 section {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
+    will-change: opacity, transform;
     transition: all 0.8s ease;
 }
 
