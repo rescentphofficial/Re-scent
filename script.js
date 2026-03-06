@@ -243,12 +243,14 @@ function submitFeedback() {
     fbBtn.textContent = '⏳ Sending...';
 
     const templateParams = {
-        to_email:      email,           // ← auto-reply goes TO the customer
-        reply_to:      email,           // ← matches {{reply_to}} in EmailJS template
-        customer_name: name,
-        scent:         scent,
-        rating:        '★'.repeat(rating) + '☆'.repeat(5 - rating) + ` (${rating}/5)`,
-        feedback:      text,
+        to_email:       email,                           // customer gets auto-reply
+        admin_email:    'rescentph.official@gmail.com',  // Re:Scent gets notification
+        reply_to:       email,
+        customer_name:  name,
+        customer_email: email,
+        scent:          scent,
+        rating:         '★'.repeat(rating) + '☆'.repeat(5 - rating) + ` (${rating}/5)`,
+        feedback:       text,
     };
 
     const finishFeedback = () => {
