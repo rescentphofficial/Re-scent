@@ -359,9 +359,14 @@ const sectionObserver = new IntersectionObserver((entries) => {
             });
         }
     });
-}, { threshold: 0.2, rootMargin: '-50px' });
+}, { threshold: 0.05, rootMargin: '0px' });
 
 sections.forEach(section => sectionObserver.observe(section));
+
+// Safety fallback: force-show any section still hidden after 1s
+setTimeout(() => {
+    document.querySelectorAll('section:not(.visible)').forEach(s => s.classList.add('visible'));
+}, 1000);
 
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
