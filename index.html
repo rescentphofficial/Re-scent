@@ -21,6 +21,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#products" class="nav-link">Products</a></li>
                 <li><a href="#how-to-use" class="nav-link">How to Use</a></li>
+                <li><a href="#how-to-dispose" class="nav-link">How to Dispose</a></li>
                 <li><a href="#features" class="nav-link">Features</a></li>
                 <li><a href="#impact" class="nav-link">Impact</a></li>
                 <li><a href="#contact" class="nav-link">Order</a></li>
@@ -51,6 +52,12 @@
                         <div class="carousel-image">
                             <img src="Ivory Rouge.png" alt="Ivory Rouge">
                         </div>
+                        <div class="carousel-image">
+                            <img src="Midnight Opulence.png" alt="Midnight Opulence">
+                        </div>
+                        <div class="carousel-image">
+                            <img src="Perry Winkle.png" alt="Perry Winkle">
+                        </div>
                     </div>
                     <div class="floating-elements element-1" id="fruit1">
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FF9800'/%3E%3Ccircle cx='40' cy='35' r='8' fill='%23FFB74D'/%3E%3Cellipse cx='65' cy='60' rx='15' ry='20' fill='%23FF7043'/%3E%3C/svg%3E" alt="Orange">
@@ -75,6 +82,8 @@
                     <span class="dot active" onclick="currentSlide(0)"></span>
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
         </div>
@@ -118,34 +127,56 @@
             <h2 class="section-title">Product Range</h2>
 
             <div class="products-grid">
-                <div class="product-card" onclick="selectProduct('Nectar Noir', 160)">
+                <div class="product-card" onclick="selectProduct('Nectar Noir', 100)">
                     <div class="product-image-wrapper">
                         <img src="Nectar Noir.png" alt="Nectar Noir">
                     </div>
                     <h3>Nectar Noir</h3>
-                    <p>A 20 gram concentrated wax-based fragrance offering a subtle, personal scent with direct-to-skin application.</p>
+                    <p>A 1 oz / 26g concentrated wax-based fragrance offering a subtle, personal scent with direct-to-skin application.</p>
                     <div class="product-btn-wrapper">
                         <button class="product-btn">Add to Order →</button>
                     </div>
                 </div>
 
-                <div class="product-card" onclick="selectProduct('Euphoric Solace', 160)">
+                <div class="product-card" onclick="selectProduct('Euphoric Solace', 100)">
                     <div class="product-image-wrapper">
                         <img src="Euphoric Solace.png" alt="Euphoric Solace">
                     </div>
                     <h3>Euphoric Solace</h3>
-                    <p>Compostable and recyclable cardboard tube designed for complete end-of-life sustainability.</p>
+                    <p>Compostable and recyclable cardboard tube designed for complete end-of-life sustainability. Net wt. 1 oz / 26g.</p>
                     <div class="product-btn-wrapper">
                         <button class="product-btn">Add to Order →</button>
                     </div>
                 </div>
 
-                <div class="product-card" onclick="selectProduct('Ivory Rouge', 160)">
+                <div class="product-card" onclick="selectProduct('Ivory Rouge', 100)">
                     <div class="product-image-wrapper">
                         <img src="Ivory Rouge.png" alt="Ivory Rouge">
                     </div>
                     <h3>Ivory Rouge</h3>
-                    <p>Spill-proof, travel-friendly format allowing mess-free application anytime, anywhere.</p>
+                    <p>Spill-proof, travel-friendly format allowing mess-free application anytime, anywhere. Net wt. 1 oz / 26g.</p>
+                    <div class="product-btn-wrapper">
+                        <button class="product-btn">Add to Order →</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="selectProduct('Midnight Opulence', 100)">
+                    <div class="product-image-wrapper">
+                        <img src="Midnight Opulence.png" alt="Midnight Opulence">
+                    </div>
+                    <h3>Midnight Opulence</h3>
+                    <p>A rich, deep fragrance balm that evokes opulent evenings and dark florals. Net wt. 1 oz / 26g.</p>
+                    <div class="product-btn-wrapper">
+                        <button class="product-btn">Add to Order →</button>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="selectProduct('Perry Winkle', 100)">
+                    <div class="product-image-wrapper">
+                        <img src="Perry Winkle.png" alt="Perry Winkle">
+                    </div>
+                    <h3>Perry Winkle</h3>
+                    <p>A breezy, fresh-floral balm inspired by blooming periwinkles and soft morning dew. Net wt. 1 oz / 26g.</p>
                     <div class="product-btn-wrapper">
                         <button class="product-btn">Add to Order →</button>
                     </div>
@@ -178,6 +209,30 @@
         </div>
     </section>
 
+    <!-- How to Dispose Section -->
+    <section id="how-to-dispose">
+        <div class="section-container">
+            <h2 class="section-title">How To Dispose</h2>
+            <div class="steps-container dispose-steps">
+                <div class="step-item">
+                    <div class="step-number dispose-step-num">1</div>
+                    <h3>Peel &amp; Prep</h3>
+                    <p>Remove the sticker entirely (unless it's certified compostable) and wipe out any leftover waxy residue from the inside with a cloth or paper towel.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number dispose-step-num">2</div>
+                    <h3>Shred</h3>
+                    <p>Tear or cut the biodegradable container into small pieces to increase the surface area, which helps it break down much faster.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number dispose-step-num">3</div>
+                    <h3>Compost</h3>
+                    <p>Toss the shredded pieces into your home compost bin or bury them in soil; discard the non-biodegradable sticker in your regular trash.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features">
         <div class="section-container">
@@ -186,14 +241,14 @@
                 <ul class="features-list">
                     <li>
                         <strong>Solid Perfume Balm</strong>
-                        <p>A 20 gram concentrated wax-based fragrance that offers a subtle, personal scent with direct-to-skin application.</p>
+                        <p>A 1 oz / 26g concentrated wax-based fragrance that offers a subtle, personal scent with direct-to-skin application.</p>
                     </li>
                     <li>
                         <strong>Zero-Waste Packaging</strong>
                         <p>Housed in a signature compostable and recyclable cardboard tube designed for complete end-of-life sustainability.</p>
                     </li>
                     <li>
-                        <strong>Portable & Precise</strong>
+                        <strong>Portable &amp; Precise</strong>
                         <p>A spill-proof, travel-friendly format that allows for mess-free application anytime, anywhere.</p>
                     </li>
                     <li>
@@ -218,6 +273,7 @@
             <div class="impact-grid">
                 <div class="impact-card">
                     <div class="sdg-badge">♻️</div>
+                    <div class="impact-stat">01</div>
                     <h3>Responsible Consumption</h3>
                     <ul>
                         <li>Integrated QR code teaches sustainability</li>
@@ -227,6 +283,7 @@
                 </div>
                 <div class="impact-card">
                     <div class="sdg-badge">∞</div>
+                    <div class="impact-stat">02</div>
                     <h3>Circular Economy</h3>
                     <ul>
                         <li>Premium compostable cardboard</li>
@@ -236,6 +293,7 @@
                 </div>
                 <div class="impact-card">
                     <div class="sdg-badge">🌍</div>
+                    <div class="impact-stat">03</div>
                     <h3>Climate Action</h3>
                     <ul>
                         <li>Lower carbon emissions</li>
@@ -245,6 +303,7 @@
                 </div>
                 <div class="impact-card">
                     <div class="sdg-badge">🐟</div>
+                    <div class="impact-stat">04</div>
                     <h3>Life Below Water</h3>
                     <ul>
                         <li>100% plastic-free packaging</li>
@@ -291,19 +350,29 @@
                             <label>Select Your Scent</label>
                             <div class="product-selection">
                                 <div class="product-option">
-                                    <input type="radio" id="nectar" name="scent" value="Nectar Noir" data-price="120" onchange="handleScent(this)">
+                                    <input type="radio" id="nectar" name="scent" value="Nectar Noir" data-price="100" onchange="handleScent(this)">
                                     <label for="nectar">🖤 Nectar Noir</label>
-                                    <span class="price">₱120</span>
+                                    <span class="price">₱100</span>
                                 </div>
                                 <div class="product-option">
-                                    <input type="radio" id="euphoric" name="scent" value="Euphoric Solace" data-price="120" onchange="handleScent(this)">
+                                    <input type="radio" id="euphoric" name="scent" value="Euphoric Solace" data-price="100" onchange="handleScent(this)">
                                     <label for="euphoric">💖 Euphoric Solace</label>
-                                    <span class="price">₱120</span>
+                                    <span class="price">₱100</span>
                                 </div>
                                 <div class="product-option">
-                                    <input type="radio" id="ivory" name="scent" value="Ivory Rouge" data-price="120" onchange="handleScent(this)">
+                                    <input type="radio" id="ivory" name="scent" value="Ivory Rouge" data-price="100" onchange="handleScent(this)">
                                     <label for="ivory">✨ Ivory Rouge</label>
-                                    <span class="price">₱120</span>
+                                    <span class="price">₱100</span>
+                                </div>
+                                <div class="product-option">
+                                    <input type="radio" id="midnight" name="scent" value="Midnight Opulence" data-price="100" onchange="handleScent(this)">
+                                    <label for="midnight">🌙 Midnight Opulence</label>
+                                    <span class="price">₱100</span>
+                                </div>
+                                <div class="product-option">
+                                    <input type="radio" id="perry" name="scent" value="Perry Winkle" data-price="100" onchange="handleScent(this)">
+                                    <label for="perry">🌸 Perry Winkle</label>
+                                    <span class="price">₱100</span>
                                 </div>
                             </div>
                         </div>
@@ -323,7 +392,7 @@
                         <div class="order-item">
                             <div class="item-details">
                                 <h4 id="selectedScent">Select a scent</h4>
-                                <p>Premium Solid Perfume Balm • 20g</p>
+                                <p>Premium Solid Perfume Balm • 1 oz / 26g</p>
                             </div>
                             <div class="item-price" id="itemPrice">—</div>
                         </div>
@@ -355,13 +424,111 @@
                         <span>Total:</span>
                         <span id="total">—</span>
                     </div>
-                    <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem; text-align: center;">Free shipping to Luzon, Visayas & Mindanao</p>
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem; text-align: center;">Free shipping to Luzon, Visayas &amp; Mindanao</p>
 
                     <div class="email-button-section">
                         <button type="button" class="email-button" onclick="sendOrderEmail()">
                             📧 Send Order to Email
                         </button>
                         <p class="email-hint">Your order details will be sent to rescentph.official@gmail.com</p>
+                        <p class="email-hint" style="margin-top:0.4rem; color:#bbb; font-size:0.8rem;">📄 A printable invoice will open automatically after sending.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEEDBACK SECTION -->
+    <section id="feedback">
+        <div class="section-container">
+            <h2 class="section-title">Customer Feedback</h2>
+            <p class="feedback-subtitle">We'd love to hear from you! Share your Re:Scent experience.</p>
+
+            <div class="feedback-container">
+                <!-- Feedback Form -->
+                <div class="feedback-form-wrapper">
+                    <h3>✍️ Leave a Review</h3>
+
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="feedbackName" placeholder="Juan Dela Cruz">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Which scent did you try?</label>
+                        <select id="feedbackScent">
+                            <option value="">Select a scent...</option>
+                            <option value="Nectar Noir">🖤 Nectar Noir</option>
+                            <option value="Euphoric Solace">💖 Euphoric Solace</option>
+                            <option value="Ivory Rouge">✨ Ivory Rouge</option>
+                            <option value="Midnight Opulence">🌙 Midnight Opulence</option>
+                            <option value="Perry Winkle">🌸 Perry Winkle</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Rating</label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Review</label>
+                        <textarea id="feedbackText" placeholder="Tell us about your experience with Re:Scent..."></textarea>
+                    </div>
+
+                    <button class="feedback-submit-btn" onclick="submitFeedback()">
+                        💚 Submit Feedback
+                    </button>
+                </div>
+
+                <!-- Feedback Display -->
+                <div class="feedback-display-wrapper">
+                    <h3>💬 What Customers Say</h3>
+                    <div class="feedback-list" id="feedbackList">
+                        <!-- Seed reviews -->
+                        <div class="feedback-card">
+                            <div class="feedback-header">
+                                <div class="feedback-avatar">M</div>
+                                <div class="feedback-meta">
+                                    <strong>Maria Santos</strong>
+                                    <span class="feedback-scent">✨ Ivory Rouge</span>
+                                </div>
+                                <div class="feedback-stars">★★★★★</div>
+                            </div>
+                            <p class="feedback-text">"Absolutely love the packaging — it feels so luxurious yet guilt-free. The scent lasts all day!"</p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="feedback-header">
+                                <div class="feedback-avatar" style="background: linear-gradient(135deg, #FF6B9D, #FFA3C1);">K</div>
+                                <div class="feedback-meta">
+                                    <strong>Karl Reyes</strong>
+                                    <span class="feedback-scent">🖤 Nectar Noir</span>
+                                </div>
+                                <div class="feedback-stars">★★★★★</div>
+                            </div>
+                            <p class="feedback-text">"Nectar Noir is incredibly unique. Deep, mysterious, and the compostable tube is a game changer."</p>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="feedback-header">
+                                <div class="feedback-avatar" style="background: linear-gradient(135deg, #FFB74D, #FFD54F);">A</div>
+                                <div class="feedback-meta">
+                                    <strong>Anna Lim</strong>
+                                    <span class="feedback-scent">💖 Euphoric Solace</span>
+                                </div>
+                                <div class="feedback-stars">★★★★☆</div>
+                            </div>
+                            <p class="feedback-text">"So travel-friendly! I keep it in my bag at all times. Great that it's eco-friendly too — this brand really walks the talk."</p>
+                        </div>
+                    </div>
+                    <div class="feedback-empty" id="feedbackEmpty" style="display:none;">
+                        <p>No reviews yet. Be the first to share your experience! 🌿</p>
                     </div>
                 </div>
             </div>
@@ -379,7 +546,7 @@
                 <div class="footer-section">
                     <h4>📞 Contact Us</h4>
                     <a href="tel:+639127374185">(0912) 737 - 4185</a>
-                    <a href="mailto:rescentph.official@gmail.com">rescentph.official@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#0173647262646f7571692f6e6767686268606d41666c60686d2f626e6c"><span class="__cf_email__" data-cfemail="6e1c0b1d0d0b001a1e0640010808070d070f022e09030f0702400d0103">[email&#160;protected]</span></a>
                     <p style="margin-top: 1rem; font-size: 0.95rem;">
                         Davao, Davao Region, PH
                     </p>
@@ -387,14 +554,24 @@
                 <div class="footer-section">
                     <h4>🌐 Follow Us</h4>
                     <div class="social-links">
-                        <a href="#" title="Facebook">f</a>
-                        <a href="#" title="Instagram">📷</a>
-                        <a href="#" title="Twitter">𝕏</a>
+                        <a href="https://www.facebook.com/share/19xNhwHmyw/" target="_blank" title="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/rescentph.official?igsh=MWE5cjhnaHp6Ymp3aQ==" target="_blank" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="https://x.com/ReScent159101" target="_blank" title="X / Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@rescent.ph?_r=1&_t=ZS-94Sq7QiYnGq" target="_blank" title="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/></svg>
+                        </a>
                     </div>
                     <p style="margin-top: 1.5rem; font-size: 0.95rem;">
                         Connect with us on social media for exclusive updates and promotions!
                     </p>
                 </div>
+       
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Re:Scent. All rights reserved. | Sustainable Luxury Fragrance | Made with 💚 for the Planet</p>
@@ -402,6 +579,8 @@
         </div>
     </footer>
 
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
