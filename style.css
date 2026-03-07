@@ -879,7 +879,7 @@ nav a.active {
 /* 5th option centered */
 .product-option:last-child:nth-child(odd) {
     grid-column: 1 / -1;
-    max-width: 50%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -891,7 +891,11 @@ nav a.active {
     transition: all 0.3s ease;
     text-align: center;
     background: #f9f9f9;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
 }
 
 .product-option input {
@@ -907,18 +911,17 @@ nav a.active {
 
 .product-option label {
     cursor: pointer;
-    display: block;
     font-weight: 600;
     color: #333;
     pointer-events: none;
+    white-space: nowrap;
 }
 
 .product-option .price {
-    display: block;
-    margin-top: 0.5rem;
     font-size: 1.3rem;
     font-weight: 700;
     color: #7CB342;
+    pointer-events: none;
 }
 
 /* Order Summary */
@@ -1588,7 +1591,7 @@ nav a.active {
 
     .product-option:last-child:nth-child(odd) {
         grid-column: auto;
-        max-width: 100%;
+        width: 100%;
         margin: 0;
     }
 
