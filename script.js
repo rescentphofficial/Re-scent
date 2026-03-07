@@ -345,43 +345,51 @@ function showToast(message, type = 'success') {
 // =============================================
 // SCROLL ANIMATIONS & ACTIVE NAV
 // =============================================
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
+function initScrollAnimations() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-// Step 1: Add animation class to all sections EXCEPT hero
-sections.forEach(section => {
-    if (section.id !== 'hero') {
-        section.classList.add('section-animate');
-    }
-});
-
-// Step 2: Observe sections and reveal on scroll
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + id) link.classList.add('active');
-            });
+    // Step 1: Add animation class to non-hero sections
+    sections.forEach(section => {
+        if (section.id !== 'hero') {
+            section.classList.add('section-animate');
         }
     });
-}, { threshold: 0.05 });
 
-sections.forEach(section => sectionObserver.observe(section));
+    // Step 2: Observe sections and reveal on scroll
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + id) link.classList.add('active');
+                });
+            }
+        });
+    }, { threshold: 0.05 });
 
-// Step 3: Hard fallback — show everything after 1.5s no matter what
-setTimeout(() => {
-    document.querySelectorAll('section').forEach(s => {
-        s.classList.add('visible');
+    sections.forEach(section => sectionObserver.observe(section));
+
+    // Step 3: Hard fallback — force show everything after 1.5s
+    setTimeout(() => {
+        document.querySelectorAll('section').forEach(s => s.classList.add('visible'));
+    }, 1500);
+
+    // Nav smooth scroll
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+        });
     });
-}, 1500);
+}
 
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
-    });
-});
+// Run after DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+    initScrollAnimations();
+}
