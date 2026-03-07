@@ -348,6 +348,14 @@ function showToast(message, type = 'success') {
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
+// Step 1: Add animation class to all sections EXCEPT hero
+sections.forEach(section => {
+    if (section.id !== 'hero') {
+        section.classList.add('section-animate');
+    }
+});
+
+// Step 2: Observe sections and reveal on scroll
 const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -355,25 +363,25 @@ const sectionObserver = new IntersectionObserver((entries) => {
             const id = entry.target.getAttribute('id');
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${id}`) link.classList.add('active');
+                if (link.getAttribute('href') === '#' + id) link.classList.add('active');
             });
         }
     });
-}, { threshold: 0.05, rootMargin: '0px' });
+}, { threshold: 0.05 });
 
 sections.forEach(section => sectionObserver.observe(section));
 
-// Safety fallback: force-show any section still hidden after 1s
+// Step 3: Hard fallback — show everything after 1.5s no matter what
 setTimeout(() => {
-    document.querySelectorAll('section:not(.visible)').forEach(s => s.classList.add('visible'));
-}, 1000);
+    document.querySelectorAll('section').forEach(s => {
+        s.classList.add('visible');
+    });
+}, 1500);
 
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
-        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+        if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
     });
 });
-
-document.getElementById('hero').classList.add('visible');
