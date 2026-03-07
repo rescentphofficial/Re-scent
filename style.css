@@ -1646,16 +1646,15 @@ nav a.active {
     }
 }
 
-/* Scroll Animations */
-/* Sections start hidden; JS adds .visible. Fallback: show after 1s via JS */
-section {
+/* Scroll Animations - opacity is NEVER set to 0 in CSS */
+/* JS adds .section-animate class first, then .visible to trigger the transition */
+section.section-animate {
     opacity: 0;
     transform: translateY(30px);
-    will-change: opacity, transform;
-    transition: all 0.8s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-section.visible {
+section.section-animate.visible {
     opacity: 1;
     transform: translateY(0);
 }
