@@ -910,11 +910,18 @@ nav a.active {
     display: block;
     font-weight: 600;
     color: #333;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
 }
 
 .product-option .price {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     font-size: 1.3rem;
     font-weight: 700;
     color: #7CB342;
